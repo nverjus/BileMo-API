@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -20,32 +21,42 @@ class User
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank
+     * @Assert\Length(max = 50, maxMessage = "The username cannot be longer than {{ limit }} characters")
      */
     private $username;
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank
+     * @Assert\Length(max = 50, maxMessage = "The first name cannot be longer than {{ limit }} characters")
      */
     private $firstName;
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank
+     * @Assert\Length(max = 50, maxMessage = "The last name cannot be longer than {{ limit }} characters")
      */
     private $LastName;
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\Email
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=60)
+     * @Assert\NotBlank
+     * @Assert\Length(max = 60, maxMessage = "The password cannot be longer than {{ limit }} characters")
      */
     private $password;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="users")
      * @ORM\JoinColumn(nullable=false)
+     * @Assert\NotBlank
      */
     private $client;
 
