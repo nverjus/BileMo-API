@@ -60,7 +60,7 @@ class Product
     /**
      * @ORM\Column(type="string", length=20)
      * @Assert\NotBlank
-     * @Assert\Length(max = 20, maxMessage = "The screenSize cannot be longer than {{ limit }} characters")
+     * @Assert\Length(max = 20, maxMessage = "The screen size cannot be longer than {{ limit }} characters")
      */
     private $screenSize;
 
