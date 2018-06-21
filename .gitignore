@@ -1,2 +1,10 @@
+
+###> symfony/framework-bundle ###
+/.env
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+docker-compose.yml
 .docker/data
-docker-compose.override.yml
