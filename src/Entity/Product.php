@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -20,36 +21,46 @@ class Product
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank
+     * @Assert\Length(max = 50, maxMessage = "The brand cannot be longer than {{ limit }} characters")
      */
     private $brand;
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank
+     * @Assert\Length(max = 50, maxMessage = "The model cannot be longer than {{ limit }} characters")
      */
     private $model;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank
      */
     private $description;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank
      */
     private $ram;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank
      */
     private $memory;
 
     /**
      * @ORM\Column(type="float")
+     * @Assert\NotBlank
      */
     private $price;
 
     /**
      * @ORM\Column(type="string", length=20)
+     * @Assert\NotBlank
+     * @Assert\Length(max = 20, maxMessage = "The screenSize cannot be longer than {{ limit }} characters")
      */
     private $screenSize;
 
