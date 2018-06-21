@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -23,21 +24,27 @@ class Client implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank
+     * @Assert\Length(max = 50, maxMessage = "The username cannot be longer than {{ limit }} characters")
      */
     private $username;
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank
+     * @Assert\Length(max = 50, maxMessage = "The client name cannot be longer than {{ limit }} characters")
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\Email
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=60)
+     * @Assert\NotBlank
      */
     private $password;
 
