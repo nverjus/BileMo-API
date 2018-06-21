@@ -2,10 +2,10 @@ version:                                '3'
 services:
     mysql:
         environment:
-            MYSQL_RANDOM_ROOT_PASSWORD:
-            MYSQL_DATABASE:             bilemo
-            MYSQL_USER:                 bilemo
-            MYSQL_PASSWORD:             bilemo
+            MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+            MYSQL_DATABASE:             'bilemo'
+            MYSQL_USER:                 'bilemo'
+            MYSQL_PASSWORD:             'bilemo'
 
     blackfire:
         environment:
