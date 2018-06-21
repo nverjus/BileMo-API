@@ -6,5 +6,5 @@
 /vendor/
 ###< symfony/framework-bundle ###
 
-docker-compose.yml
+docker-compose.override.yml
 .docker/data
