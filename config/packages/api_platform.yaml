@@ -7,3 +7,8 @@ api_platform:
     collection:
       pagination:
         items_per_page: 10
+    swagger:
+         api_keys:
+             apiKey:
+                name:   Authorization
+                type:   header

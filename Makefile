@@ -56,6 +56,7 @@ up:
 
 perm:
 	$(EXEC) chown -R www-data:root var
+	$(EXEC) chown -R www-data:root config/jwt
 
 ssl:
 	$(EXEC) openssl genrsa -out config/jwt/private.pem -aes256 4096 \
