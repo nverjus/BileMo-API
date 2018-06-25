@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ApiResource()
  * @ORM\Entity(repositoryClass="App\Repository\ClientRepository")
  */
-class Client implements UserInterface
+class Client implements UserInterface, \Serializable
 {
     /**
      * @ORM\Id()
@@ -166,5 +166,26 @@ class Client implements UserInterface
 
     public function eraseCredentials()
     {
+    }
+
+    public function serialize()
+    {
+        return serialize(array(
+        $this->id,
+        $this->username,
+        $this->password,
+        $this->name,
+    ));
+    }
+
+    public function unserialize($serialized)
+    {
+        list(
+        $this->id,
+        $this->username,
+        $this->password,
+        $this->name,
+
+    ) = unserialize($serialized, ['allowed_classes' => false]);
     }
 }
