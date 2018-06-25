@@ -12,7 +12,7 @@ help:
 	@grep -E '(^[a-zA-Z_-]+:.*?##.*$$)|(^##)' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}' | sed -e 's/\[32m##/[33m/'
 
 
-start: up vendor db perm  ## Install and start the project
+start: up vendor db ssl perm   ## Install and start the project
 
 stop:                                                                                                  ## Remove docker containers
 	$(DOCKER_COMPOSE) kill
@@ -56,6 +56,14 @@ up:
 
 perm:
 	$(EXEC) chown -R www-data:root var
+
+ssl:
+	$(EXEC) openssl genrsa -out config/jwt/private.pem -aes256 4096 \
+  && $(EXEC) openssl rsa -in config/jwt/private.pem -out config/jwt/private2.pem \
+  && $(EXEC) mv config/jwt/private.pem config/jwt/private.pem-back \
+  && $(EXEC) mv config/jwt/private2.pem config/jwt/private.pem \
+	&& $(EXEC) rm config/jwt/private.pem-back \
+  && $(EXEC) openssl rsa -pubout -in config/jwt/private.pem -out config/jwt/public.pem
 
 
 # Rules from files
