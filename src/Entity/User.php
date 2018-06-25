@@ -3,11 +3,11 @@
 namespace App\Entity;
 
 use Symfony\Component\Validator\Constraints as Assert;
-use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Annotation as Api;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource()
+ * @Api\ApiResource()
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
 class User
@@ -56,6 +56,7 @@ class User
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="users")
      * @ORM\JoinColumn(nullable=false)
+     * @Api\ApiSubresource
      * @Assert\NotBlank
      */
     private $client;
