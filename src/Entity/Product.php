@@ -58,9 +58,8 @@ class Product
     private $price;
 
     /**
-     * @ORM\Column(type="string", length=20)
+     * @ORM\Column(type="float")
      * @Assert\NotBlank
-     * @Assert\Length(max = 20, maxMessage = "The screen size cannot be longer than {{ limit }} characters")
      */
     private $screenSize;
 
@@ -141,12 +140,12 @@ class Product
         return $this;
     }
 
-    public function getScreenSize(): ?string
+    public function getScreenSize(): ?float
     {
         return $this->screenSize;
     }
 
-    public function setScreenSize(string $screenSize): self
+    public function setScreenSize(float $screenSize): self
     {
         $this->screenSize = $screenSize;
 
