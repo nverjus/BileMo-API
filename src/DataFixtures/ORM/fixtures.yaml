@@ -103,3 +103,17 @@ App\Entity\Product:
     memory:         8
     price:          175.21
     screenSize:     4.5
+
+App\Entity\Client:
+  client1:
+    username:       'admin'
+    name:           'BileMo'
+    email:          '<email()>'
+    password:       'admin'
+    roles:
+        - 'ROLE_ADMIN'
+  client{2..10}:
+    username:       '<username()>'
+    name:           '<lastName()>'
+    email:          '<email()>'
+    password:       'password'
