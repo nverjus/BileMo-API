@@ -3,11 +3,21 @@
 namespace App\Entity;
 
 use Symfony\Component\Validator\Constraints as Assert;
-use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Annotation as Api;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource()
+ * @Api\ApiResource(
+ *     collectionOperations={
+ *         "get"={"access_control"="is_granted('ROLE_CLIENT')"},
+ *         "post"={"access_control"="is_granted('ROLE_ADMIN')"}
+ *     },
+ *     itemOperations={
+ *         "get"={"access_control"="is_granted('ROLE_CLIENT')"},
+ *         "put"={"access_control"="is_granted('ROLE_ADMIN')"},
+ *         "delete"={"access_control"="is_granted('ROLE_ADMIN')"}
+ *     }
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
  */
 class Product

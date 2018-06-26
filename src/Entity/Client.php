@@ -10,9 +10,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @Api\ApiResource(
- * attributes={"access_control"="is_granted('ROLE_ADMIN')"}
- * )
+ * @Api\ApiResource
  * @ORM\Entity(repositoryClass="App\Repository\ClientRepository")
  */
 class Client implements UserInterface, \Serializable
