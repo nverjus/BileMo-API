@@ -112,7 +112,12 @@ App\Entity\Client:
     password:       'admin'
     roles:
         - 'ROLE_ADMIN'
-  client{2..10}:
+  client2:
+    username:       'client'
+    name:           'ClientTest'
+    email:          '<email()>'
+    password:       'client'
+  client{3..10}:
     username:       '<username()>'
     name:           '<lastName()>'
     email:          '<email()>'

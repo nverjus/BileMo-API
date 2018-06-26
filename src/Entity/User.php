@@ -7,7 +7,7 @@ use ApiPlatform\Core\Annotation as Api;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @Api\ApiResource()
+ * @Api\ApiResource
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
 class User
@@ -38,10 +38,11 @@ class User
      * @Assert\NotBlank
      * @Assert\Length(max = 50, maxMessage = "The last name cannot be longer than {{ limit }} characters")
      */
-    private $LastName;
+    private $lastName;
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank
      * @Assert\Email
      */
     private $email;
@@ -56,7 +57,6 @@ class User
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="users")
      * @ORM\JoinColumn(nullable=false)
-     * @Api\ApiSubresource
      * @Assert\NotBlank
      */
     private $client;
@@ -92,12 +92,12 @@ class User
 
     public function getLastName(): ?string
     {
-        return $this->LastName;
+        return $this->lastName;
     }
 
-    public function setLastName(string $LastName): self
+    public function setLastName(string $lastName): self
     {
-        $this->LastName = $LastName;
+        $this->lastName = $lastName;
 
         return $this;
     }
