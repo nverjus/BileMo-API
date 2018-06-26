@@ -34,3 +34,7 @@ services:
         tags:
             - { name: api_platform.doctrine.orm.query_extension.collection, priority: 9 }
             - { name:                      api_platform.doctrine.orm.query_extension.item }
+
+    App\EventListener\UserListener:
+        tags:
+            - { name: doctrine.event_listener, event: prePersist }

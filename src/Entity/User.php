@@ -57,7 +57,6 @@ class User
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="users")
      * @ORM\JoinColumn(nullable=false)
-     * @Assert\NotBlank
      */
     private $client;
 
