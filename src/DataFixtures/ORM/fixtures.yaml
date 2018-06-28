@@ -129,5 +129,4 @@ App\Entity\User:
     firstName:      '<firstName()>'
     lastName:       '<lastName()>'
     email:          '<email()>'
-    password:       'password'
     client:         '@client*'

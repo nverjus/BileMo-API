@@ -18,7 +18,7 @@ class UserListener
     {
         $entity = $args->getEntity();
 
-        if (!$entity instanceof User) {
+        if (!$entity instanceof User || (null === $this->tokenStorage->getToken())) {
             return;
         }
 

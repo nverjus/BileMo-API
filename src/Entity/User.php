@@ -48,13 +48,6 @@ class User
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=60)
-     * @Assert\NotBlank
-     * @Assert\Length(max = 60, maxMessage = "The password cannot be longer than {{ limit }} characters")
-     */
-    private $password;
-
-    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="users")
      * @ORM\JoinColumn(nullable=false)
      */
@@ -109,18 +102,6 @@ class User
     public function setEmail(string $email): self
     {
         $this->email = $email;
-
-        return $this;
-    }
-
-    public function getPassword(): ?string
-    {
-        return $this->password;
-    }
-
-    public function setPassword(string $password): self
-    {
-        $this->password = $password;
 
         return $this;
     }
