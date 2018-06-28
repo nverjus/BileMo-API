@@ -59,7 +59,7 @@ perm:
 	$(EXEC) chown -R www-data:root config/jwt
 
 ssl:
-	$(EXEC) mkdir config/jwt
+	$(EXEC) mkdir -p config/jwt
 	$(EXEC) openssl genrsa -out config/jwt/private.pem -aes256 4096 \
   && $(EXEC) openssl rsa -in config/jwt/private.pem -out config/jwt/private2.pem \
   && $(EXEC) mv config/jwt/private.pem config/jwt/private.pem-back \
