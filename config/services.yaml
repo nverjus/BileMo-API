@@ -38,3 +38,7 @@ services:
     App\EventListener\UserListener:
         tags:
             - { name: doctrine.event_listener, event: prePersist }
+
+    App\EventListener\ResponseListener:
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, priority: -1025 }

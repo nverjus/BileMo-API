@@ -86,6 +86,15 @@
     "fzaninotto/faker": {
         "version": "v1.7.1"
     },
+    "guzzlehttp/guzzle": {
+        "version": "6.3.3"
+    },
+    "guzzlehttp/promises": {
+        "version": "v1.3.1"
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.4.2"
+    },
     "hautelook/alice-bundle": {
         "version": "1.4",
         "recipe": {
@@ -158,6 +167,9 @@
     "psr/container": {
         "version": "1.0.0"
     },
+    "psr/http-message": {
+        "version": "1.0.1"
+    },
     "psr/log": {
         "version": "1.0.2"
     },
@@ -166,6 +178,9 @@
     },
     "symfony/asset": {
         "version": "v4.1.0"
+    },
+    "symfony/browser-kit": {
+        "version": "v4.1.1"
     },
     "symfony/cache": {
         "version": "v4.1.0"
@@ -190,6 +205,9 @@
     },
     "symfony/doctrine-bridge": {
         "version": "v4.1.0"
+    },
+    "symfony/dom-crawler": {
+        "version": "v4.1.1"
     },
     "symfony/dotenv": {
         "version": "v4.1.0"
