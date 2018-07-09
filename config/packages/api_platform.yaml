@@ -17,6 +17,6 @@ api_platform:
         invalidation:
             enabled:      true
             varnish_urls: ['%env(VARNISH_URL)%']
-        max_age:          0
+        max_age:          3600
         shared_max_age:   3600
         public:           true

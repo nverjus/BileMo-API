@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "95c76ca2a21d8308b0c3b8d5d33228ce",
+    "content-hash": "7c8f8f6a4d54d7d906249893ac68a7c8",
     "packages": [
         {
             "name": "api-platform/api-pack",
@@ -44,32 +44,32 @@
         },
         {
             "name": "api-platform/core",
-            "version": "v2.2.8",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/core.git",
-                "reference": "e8e4ce20336978c07a86116c658615caf442e880"
+                "reference": "5b5b4ef13a70b495dda32863935a0a0f79873da1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/api-platform/core/zipball/e8e4ce20336978c07a86116c658615caf442e880",
-                "reference": "e8e4ce20336978c07a86116c658615caf442e880",
+                "url": "https://api.github.com/repos/api-platform/core/zipball/5b5b4ef13a70b495dda32863935a0a0f79873da1",
+                "reference": "5b5b4ef13a70b495dda32863935a0a0f79873da1",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "^1.0",
-                "php": ">=7.0",
+                "php": ">=7.1",
                 "psr/cache": "^1.0",
                 "psr/container": "^1.0",
                 "symfony/http-foundation": "^3.1 || ^4.0",
                 "symfony/http-kernel": "^2.7 || ^3.0 || ^4.0",
                 "symfony/property-access": "^2.7 || ^3.0 || ^4.0",
                 "symfony/property-info": "^3.3.11 || ^4.0",
-                "symfony/serializer": "^3.1 || ^4.0",
+                "symfony/serializer": "^4.1",
                 "willdurand/negotiation": "^2.0.3"
             },
             "conflict": {
-                "symfony/dependency-injection": "<3.3"
+                "symfony/dependency-injection": "<3.4"
             },
             "require-dev": {
                 "behat/behat": "^3.1",
@@ -79,9 +79,9 @@
                 "behat/symfony2-extension": "^2.1.1",
                 "behatch/contexts": "^3.1",
                 "doctrine/annotations": "^1.2",
-                "doctrine/doctrine-bundle": "^1.6.3",
+                "doctrine/doctrine-bundle": "^1.8",
                 "doctrine/orm": "^2.5.2",
-                "friendsofsymfony/user-bundle": "^2.0",
+                "friendsofsymfony/user-bundle": "^2.1",
                 "guzzlehttp/guzzle": "^6.0",
                 "justinrainbow/json-schema": "^5.0",
                 "nelmio/api-doc-bundle": "^2.13.3",
@@ -90,25 +90,29 @@
                 "phpdocumentor/type-resolver": "^0.2.1 || ^0.3 || 0.4",
                 "phpunit/phpunit": "^6.1",
                 "psr/log": "^1.0",
+                "ramsey/uuid": "^3.7",
+                "ramsey/uuid-doctrine": "^1.4",
                 "sensio/framework-extra-bundle": "^3.0.11 || ^4.0",
                 "symfony/asset": "^3.3 || ^4.0",
                 "symfony/cache": "^3.3 || ^4.0",
-                "symfony/config": "^3.3 || ^4.0",
-                "symfony/console": "^3.3 || ^4.0",
+                "symfony/config": "^3.4 || ^4.0",
+                "symfony/console": "^3.4 || ^4.0",
                 "symfony/debug": "^2.8 || ^3.0 || ^4.0",
-                "symfony/dependency-injection": "^3.3 || ^4.0",
+                "symfony/dependency-injection": "^3.4 || ^4.0",
                 "symfony/doctrine-bridge": "^2.8.12 || ^3.0 || ^4.0",
-                "symfony/event-dispatcher": "^3.3 || ^4.0",
+                "symfony/event-dispatcher": "^3.4 || ^4.0",
                 "symfony/expression-language": "^2.8 || ^3.0 || ^4.0",
                 "symfony/finder": "^3.3 || ^4.0",
                 "symfony/form": "^3.3 || ^4.0",
                 "symfony/framework-bundle": "^3.3 || ^4.0",
+                "symfony/http-foundation": "^3.1@dev || ^4.0@dev",
                 "symfony/phpunit-bridge": "^3.3 || ^4.0",
                 "symfony/routing": "^3.3 || ^4.0",
                 "symfony/security": "^3.0 || ^4.0",
-                "symfony/security-bundle": "^3.0 || ^4.0",
-                "symfony/twig-bundle": "^3.1 || ^4.0",
+                "symfony/security-bundle": "^3.4 || ^4.0",
+                "symfony/twig-bundle": "^3.4 || ^4.0",
                 "symfony/validator": "^3.3 || ^4.0",
+                "symfony/web-profiler-bundle": "^3.3 || ^4.0",
                 "symfony/yaml": "^3.3 || ^4.0",
                 "webonyx/graphql-php": ">=0.12 <1.0"
             },
@@ -117,17 +121,19 @@
                 "guzzlehttp/guzzle": "To use the HTTP cache invalidation system.",
                 "phpdocumentor/reflection-docblock": "To support extracting metadata from PHPDoc.",
                 "psr/cache-implementation": "To use metadata caching.",
+                "ramsey/uuid": "To support Ramsey's UUID identifiers.",
                 "symfony/cache": "To have metadata caching when using Symfony integration.",
                 "symfony/config": "To load XML configuration files.",
                 "symfony/expression-language": "To use authorization features.",
                 "symfony/security": "To use authorization features.",
                 "symfony/twig-bundle": "To use the Swagger UI integration.",
+                "symfony/web-profiler-bundle": "To use the data collector.",
                 "webonyx/graphql-php": "To support GraphQL."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2.x-dev"
+                    "dev-master": "2.3.x-dev"
                 }
             },
             "autoload": {
@@ -157,7 +163,7 @@
                 "rest",
                 "swagger"
             ],
-            "time": "2018-06-18T07:29:19+00:00"
+            "time": "2018-07-06T13:46:48+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -1313,37 +1319,95 @@
             "time": "2014-01-12T16:20:24+00:00"
         },
         {
-            "name": "lexik/jwt-authentication-bundle",
-            "version": "v2.4.4",
+            "name": "lcobucci/jwt",
+            "version": "3.2.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/lexik/LexikJWTAuthenticationBundle.git",
-                "reference": "bcb8e2a658cc0ca3cc6949edf1c9b84ed4aa1277"
+                "url": "https://github.com/lcobucci/jwt.git",
+                "reference": "0b5930be73582369e10c4d4bb7a12bac927a203c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lexik/LexikJWTAuthenticationBundle/zipball/bcb8e2a658cc0ca3cc6949edf1c9b84ed4aa1277",
-                "reference": "bcb8e2a658cc0ca3cc6949edf1c9b84ed4aa1277",
+                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/0b5930be73582369e10c4d4bb7a12bac927a203c",
+                "reference": "0b5930be73582369e10c4d4bb7a12bac927a203c",
                 "shasum": ""
             },
             "require": {
-                "namshi/jose": "^7.2",
-                "php": "^5.5|^7.0",
-                "symfony/console": "^2.8|^3.0|^4.0",
-                "symfony/framework-bundle": "^2.8|^3.0|^4.0",
-                "symfony/security-bundle": "^2.8|^3.0|^4.0"
+                "ext-openssl": "*",
+                "php": ">=5.5"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^1.1|^2.8@dev",
-                "lcobucci/jwt": "~3.2",
-                "symfony/browser-kit": "^2.8|^3.0|^4.0",
-                "symfony/dom-crawler": "^2.8|^3.0|^4.0",
-                "symfony/phpunit-bridge": "~3.3",
-                "symfony/yaml": "^2.8|^3.0|^4.0"
+                "mdanter/ecc": "~0.3.1",
+                "mikey179/vfsstream": "~1.5",
+                "phpmd/phpmd": "~2.2",
+                "phpunit/php-invoker": "~1.1",
+                "phpunit/phpunit": "~4.5",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "suggest": {
+                "mdanter/ecc": "Required to use Elliptic Curves based algorithms."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lcobucci\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Luís Otávio Cobucci Oblonczyk",
+                    "email": "lcobucci@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to work with JSON Web Token and JSON Web Signature",
+            "keywords": [
+                "JWS",
+                "jwt"
+            ],
+            "time": "2017-09-01T08:23:26+00:00"
+        },
+        {
+            "name": "lexik/jwt-authentication-bundle",
+            "version": "v2.5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lexik/LexikJWTAuthenticationBundle.git",
+                "reference": "85b05784fbad7d6435626915edeeb55ed0bcd6a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lexik/LexikJWTAuthenticationBundle/zipball/85b05784fbad7d6435626915edeeb55ed0bcd6a7",
+                "reference": "85b05784fbad7d6435626915edeeb55ed0bcd6a7",
+                "shasum": ""
+            },
+            "require": {
+                "lcobucci/jwt": "^3.2",
+                "namshi/jose": "^7.2",
+                "php": "^5.5|^7.0",
+                "symfony/framework-bundle": "^3.4|^4.0",
+                "symfony/security-bundle": "^3.4|^4.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.1|^2.8",
+                "symfony/browser-kit": "^3.4|^4.0",
+                "symfony/console": "^3.4|^4.0",
+                "symfony/dom-crawler": "^3.4|^4.0",
+                "symfony/phpunit-bridge": "^3.4|^4.0",
+                "symfony/var-dumper": "^3.4|^4.0",
+                "symfony/yaml": "^3.4|^4.0"
             },
             "suggest": {
                 "gesdinet/jwt-refresh-token-bundle": "Implements a refresh token system over Json Web Tokens in Symfony",
-                "lcobucci/jwt": "For using the LcobucciJWTEncoder",
                 "spomky-labs/lexik-jose-bridge": "Provides a JWT Token encoder with encryption support"
             },
             "type": "symfony-bundle",
@@ -1406,7 +1470,7 @@
                 "rest",
                 "symfony"
             ],
-            "time": "2018-03-06T12:23:17+00:00"
+            "time": "2018-07-06T10:21:24+00:00"
         },
         {
             "name": "namshi/jose",

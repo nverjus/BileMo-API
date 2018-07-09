@@ -18,11 +18,6 @@ services:
         resource:                          '../src/*'
         exclude:                           '../src/{Entity,Migrations,Tests,Kernel.php}'
 
-    # controllers are imported separately to make sure services can be injected
-    # as action arguments even if you don't extend any base controller class
-    App\Controller\:
-        resource:                          '../src/Controller'
-        tags:                              ['controller.service_arguments']
 
     App\EventListener\ClientSubscriber:
         arguments:                         ["@security.user_password_encoder.generic"]
@@ -38,7 +33,3 @@ services:
     App\EventListener\UserListener:
         tags:
             - { name: doctrine.event_listener, event: prePersist }
-
-    App\EventListener\ResponseListener:
-        tags:
-            - { name: kernel.event_listener, event: kernel.response, priority: -1025 }

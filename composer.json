@@ -1,4 +1,6 @@
 {
+  "name": "bilemo/bilemo-api",
+  "description": "The BileMo REST API",
   "type": "project",
   "license": "proprietary",
   "require": {
