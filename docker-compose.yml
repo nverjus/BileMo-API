@@ -3,7 +3,7 @@ services:
     apache:
         build:        .docker/apache
         ports:
-          - 80:80
+          - 8080:80
         volumes:
           - .docker/config/vhosts:/etc/apache2/sites-available
           - .:/home/wwwroot
@@ -31,6 +31,14 @@ services:
             - 8081:80
         links:
             - mysql
+    cache-proxy:
+      build:          .docker/varnish
+      depends_on:
+        - apache
+      volumes:
+        - .docker/varnish/conf:/etc/varnish:ro
+      ports:
+        - "80:80"
 
     blackfire:
         image:        blackfire/blackfire
